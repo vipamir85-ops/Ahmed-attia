@@ -3,11 +3,11 @@ import { motion, AnimatePresence, useScroll, useTransform, type Variants } from 
 import { ChevronLeft, ChevronRight, X, Zap, Train, Clock } from "lucide-react";
 
 import railHero   from "../../assets/dji-20251111164339-0251-d_1775751492679.jpeg";
-import railImg4   from "../../assets//dji-20251111163919-0237-d_1775751492708.jpeg";
-import railImg5   from "../../assets//dji-20251111164335-0250-d_1775751492711.jpeg";
-import railImg6   from "../../assets//FB_IMG_1775651592518_1775751492713.jpg";
-import railScope  from "../../assets//work-of-scope_1775751492704.jpg";
-import railMap    from "../../assets//6342346321610868473_1775911124562.jpg";
+import railImg4   from "../../assets/dji-20251111163919-0237-d_1775751492708.jpeg";
+import railImg5   from "../../assets/dji-20251111164335-0250-d_1775751492711.jpeg";
+import railImg6   from "../../assets/FB_IMG_1775651592518_1775751492713.jpg";
+import railScope  from "../../assets/work-of-scope_1775751492704.jpg";
+import railMap    from "../../assets/6342346321610868473_1775911124562.jpg";
 
 const thumbnails = [
   { src: railImg4,  caption: "Aerial — Structural progress" },

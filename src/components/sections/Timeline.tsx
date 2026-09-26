@@ -1,7 +1,8 @@
 import { motion, type Variants } from "framer-motion";
 import { MapPin } from "lucide-react";
 import hassanLogo from "../../assets/hassan-allam.jpeg";
-import rabatLogo from "../../assets/rab.jpg";
+import rabatLogo from "../../assets/Rab.jpg";
+
 
 
 import soadaaLogo from "../../assets/el-soadaa.jpg";
