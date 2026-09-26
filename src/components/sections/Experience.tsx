@@ -2,7 +2,6 @@ import { motion, type Variants } from "framer-motion";
 import { Building, MapPin, Calendar } from "lucide-react";
 import hassanLogo from "../../assets/hassan-allam.jpeg";
 import rabatLogo from "../../assets/rab.jpg";
-
 import soadaaLogo from "../../assets/el-soadaa.jpg";
 
 const experiences = [
