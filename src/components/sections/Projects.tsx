@@ -49,7 +49,7 @@ import sandoubImg4 from "../../assets/picture6jpg_1775750247067.jpg";
 import sandoubImg5 from "../../assets/picture7jpg_1775750247069.jpg";
 import sandoubImg6 from "../../assets/34009--كوبري-سندوب-(2)_1775750247070.jpg";
 
-// ── Rabat Foundation ───────────────────────────
+// ── ALRABAT SPECIALIZED ENGINEERING ───────────────────────────
 import rabatCover from "../../assets/img-20230602-wa0046-AoPEZg1ZrGCZqb4M_1775751896689.jpg";
 import rabatImg4 from "../../assets/1591971335357-Yan26E6Q5Bs3L83b_1775751896726.jpeg";
 import rabatImg3 from "../../assets/dqtfml00otjga3odnpplr9spgcjgnqcibt6ejfn6kom-_plaintext_6382130_1775751896723.jpg";
@@ -107,10 +107,10 @@ interface Company {
 }
 
 const companies: Company[] = [
-  // ── 1. RABAT FOUNDATION (Most Recent — UAE) ──────────────────────────
+  // ── 1. ALRABAT SPECIALIZED ENGINEERING (Most Recent — UAE) ──────────────────────────
   {
-    id: "rabat",
-    name: "Rabat Foundation (Piling & Shoring Specialist)",
+    id: "ALRABAT SPECIALIZED ENGINEERING",
+    name: "ALRABAT SPECIALIZED ENGINEERING (Piling & Shoring Specialist)",
     subtitle: "UAE Infrastructure — Ongoing",
     logo: rabatLogo,
     period: "Sep 2025 – Present",
@@ -146,7 +146,7 @@ const companies: Company[] = [
         featured: true,
       },
       {
-        id: "rabat-dubai",
+        id: "ALRABAT SPECIALIZED ENGINEERING",
         title: "Infrastructure & Foundation Projects",
         location: "Dubai, UAE",
         period: "Sep 2025 – Present",
