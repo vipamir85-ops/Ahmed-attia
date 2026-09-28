@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight, Building2, Target, AlertTriangle, Lightbu
 
 // شعارات الشركات مصلحة بالمسارات والأسماء الحقيقية في مجلدك
 import hassanLogo from "../../assets/hassan-allam.jpeg";
-import rabatLogo from "../../assets/rab.jpg";
+import rabatLogo from "../../assets/Rab.jpg";
 
 import soadaaLogo from "../../assets/el-soadaa.jpg";
 
