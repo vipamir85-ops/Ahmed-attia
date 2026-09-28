@@ -38,8 +38,8 @@ const markers: MapMarker[] = [
   { id: "quarry",    lat: 30.00, lng: 31.84, title: "Quarry Bridge",                     company: "Hassan Allam Roads & Bridges",location: "New Administrative Capital", period: "2021 – 2023",       type: "Bridge",              region: "egypt" },
   { id: "rail",      lat: 29.98, lng: 30.88, title: "High-Speed Rail Bridge",            company: "Hassan Allam Roads & Bridges",location: "6th of October City",        period: "Jan 2024 – Jul 2025", type: "Rail Infrastructure", region: "egypt" },
   { id: "dakhla",    lat: 22.50, lng: 28.70, title: "Dakhla Road — East Owainat",        company: "El Soadaa Group",             location: "Western Desert",             period: "2021",              type: "Road",                region: "egypt" },
-  { id: "dubai",     lat: 25.20, lng: 55.27, title: "Infrastructure & Foundation Projects",company: "Rabat Foundation",         location: "Dubai, UAE",                 period: "Sep 2025 – Present", type: "Foundation & Piling", region: "uae",  active: true },
-  { id: "abudhabi",  lat: 24.47, lng: 54.37, title: "UAE Operations",                    company: "Rabat Foundation",           location: "Abu Dhabi, UAE",             period: "UAE",               type: "Infrastructure",      region: "uae" },
+  { id: "dubai",     lat: 25.20, lng: 55.27, title: "Infrastructure & Foundation Projects",company: "ALRABAT SPECIALIZED ENGINEERING",         location: "Dubai, UAE",                 period: "Sep 2025 – Present", type: "Foundation & Piling", region: "uae",  active: true },
+  { id: "abudhabi",  lat: 24.47, lng: 54.37, title: "UAE Operations",                    company: "ALRABAT SPECIALIZED ENGINEERING",           location: "Abu Dhabi, UAE",             period: "UAE",               type: "Infrastructure",      region: "uae" },
 ];
 
 const typeChip: Record<string, string> = {

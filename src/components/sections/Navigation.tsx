@@ -17,6 +17,16 @@ export function Navigation() {
   const { scrollY, scrollYProgress }    = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
+  // منع التمرير في الخلفية عندما تكون قائمة الهاتف مفتوحة
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => { document.body.style.overflow = "unset"; };
+  }, [mobileOpen]);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 50);
   });
@@ -45,7 +55,7 @@ export function Navigation() {
     <>
       {/* Scroll progress bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 z-[60] h-[2px] origin-left pointer-events-none"
+        className="fixed top-0 left-0 right-0 z-[100] h-[2px] origin-left pointer-events-none"
         style={{
           scaleX,
           background: "linear-gradient(90deg, #B87333 0%, #f5c87a 50%, #B87333 100%)",
@@ -57,9 +67,9 @@ export function Navigation() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          scrolled
-            ? "bg-background/92 backdrop-blur-md border-b border-white/8 py-3"
+        className={`fixed top-0 left-0 right-0 z-[90] transition-all duration-400 ${
+          scrolled || mobileOpen
+            ? "bg-background/95 backdrop-blur-md border-b border-white/8 py-4"
             : "bg-transparent py-5"
         }`}
       >
@@ -67,7 +77,7 @@ export function Navigation() {
           {/* Logo */}
           <motion.button
             onClick={() => scrollTo("hero")}
-            className="text-xl font-serif font-bold tracking-wider text-primary"
+            className="text-xl font-serif font-bold tracking-wider text-primary z-[95]"
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 18 }}
@@ -100,7 +110,7 @@ export function Navigation() {
 
           {/* Mobile burger */}
           <motion.button
-            className="md:hidden text-white/70 hover:text-primary transition-colors"
+            className="md:hidden text-white/70 hover:text-primary transition-colors z-[95] p-2 -mr-2"
             onClick={() => setMobileOpen((v) => !v)}
             whileTap={{ scale: 0.88 }}
           >
@@ -113,44 +123,47 @@ export function Navigation() {
                 transition={{ duration: 0.18 }}
                 style={{ display: "block" }}
               >
-                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+                {mobileOpen ? <X size={24} /> : <Menu size={24} />}
               </motion.span>
             </AnimatePresence>
           </motion.button>
         </div>
       </motion.header>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer full screen */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed top-[52px] left-0 right-0 z-40 bg-background/97 backdrop-blur-md border-b border-white/10 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 z-[80] bg-background/98 backdrop-blur-lg flex flex-col justify-center pt-20 overflow-hidden"
           >
-            <div className="container mx-auto px-6 py-3 flex flex-col">
+            <div className="container mx-auto px-8 py-6 flex flex-col gap-2">
               {navLinks.map((item, i) => {
                 const isActive = activeSection === item.id;
                 return (
                   <motion.button
                     key={item.id}
-                    initial={{ opacity: 0, x: -12 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.045, duration: 0.22 }}
+                    transition={{ delay: i * 0.05, duration: 0.25 }}
                     onClick={() => scrollTo(item.id)}
-                    className="text-left uppercase tracking-widest text-sm py-3.5 border-b border-white/5 flex items-center justify-between transition-colors duration-200"
-                    style={{ color: isActive ? "#B87333" : "hsl(0 0% 60%)" }}
+                    className="text-center uppercase tracking-widest text-base py-4 border-b border-white/5 flex items-center justify-between transition-colors duration-200"
+                    style={{ color: isActive ? "#B87333" : "hsl(0 0% 70%)" }}
                   >
-                    {item.label}
-                    {isActive && (
-                      <motion.span
-                        layoutId="mobile-active-dot"
-                        className="w-1.5 h-1.5 rounded-full bg-primary"
-                      />
-                    )}
+                    <span className="text-sm font-mono text-white/20">0{i+1}</span>
+                    <span className="font-medium tracking-[0.2em]">{item.label}</span>
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      {isActive && (
+                        <motion.span
+                          layoutId="mobile-active-dot"
+                          className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#B87333]"
+                        />
+                      )}
+                    </div>
                   </motion.button>
                 );
               })}

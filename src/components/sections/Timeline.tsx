@@ -66,7 +66,7 @@ const eras: TimelineEra[] = [
     id: "rabat",
     yearStart: "2025",
     yearEnd: "Present",
-    company: "Rabat Foundation",
+    company: "ALRABAT SPECIALIZED ENGINEERING",
     role: "Surveyor",
     location: "Dubai, UAE",
     logo: rabatLogo,

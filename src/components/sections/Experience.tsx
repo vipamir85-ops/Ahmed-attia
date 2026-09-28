@@ -7,7 +7,7 @@ import soadaaLogo from "../../assets/el-soadaa.jpg";
 
 const experiences = [
   {
-    company:   "Rabat Foundation",
+    company:   "ALRABAT SPECIALIZED ENGINEERING",
     role:      "Surveyor",
     period:    "Sep 2025 – Present",
     location:  "Dubai, UAE",
@@ -163,7 +163,7 @@ export function Experience() {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-20">
             {[
               { logo: hassanLogo, name: "Hassan Allam" },
-              { logo: rabatLogo,  name: "Rabat Foundation" },
+              { logo: rabatLogo,  name: "ALRABAT SPECIALIZED ENGINEERING" },
               { logo: soadaaLogo, name: "El Soadaa Group" },
             ].map((co, i) => (
               <motion.div

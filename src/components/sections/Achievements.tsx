@@ -35,7 +35,7 @@ const achievements: Achievement[] = [
     stat: "2",
     title: "Countries · 3 Contractors",
     description:
-      "International track record spanning Egypt and UAE, working with three major contractors: El Soadaa Group, Hassan Allam, and Rabat Foundation.",
+      "International track record spanning Egypt and UAE, working with three major contractors: El Soadaa Group, Hassan Allam, and ALRABAT SPECIALIZED ENGINEERING.",
   },
   {
     icon: Target,
