@@ -5,8 +5,18 @@ import { X, ChevronLeft, ChevronRight, Building2, Target, AlertTriangle, Lightbu
 // شعارات الشركات مصلحة بالمسارات والأسماء الحقيقية في مجلدك
 import hassanLogo from "../../assets/hassan-allam.jpeg";
 import rabatLogo from "../../assets/Rab.jpg";
-
 import soadaaLogo from "../../assets/el-soadaa.jpg";
+
+// ── New Project: DIB – Shoring Works ──────────────────
+import dib1 from "../../assets/dib-1.png";
+import dib2 from "../../assets/dib-2.png";
+import dib3 from "../../assets/dib-3.png";
+import dib4 from "../../assets/dib-4.png";
+import dib5 from "../../assets/dib-5.png";
+import dib6 from "../../assets/dib-6.png";
+import dib7 from "../../assets/dib-7.png";
+import dib8 from "../../assets/dib-8.png";
+import dib9 from "../../assets/dib-9.png";
 
 // ── Rail Bridge (Hassan Allam) ──────────────────
 import railCover from "../../assets/dji-20251111164339-0251-d_1775751492679.jpeg";
@@ -39,7 +49,6 @@ import sandoubImg4 from "../../assets/picture6jpg_1775750247067.jpg";
 import sandoubImg5 from "../../assets/picture7jpg_1775750247069.jpg";
 import sandoubImg6 from "../../assets/34009--كوبري-سندوب-(2)_1775750247070.jpg";
 
-
 // ── Rabat Foundation ───────────────────────────
 import rabatCover from "../../assets/img-20230602-wa0046-AoPEZg1ZrGCZqb4M_1775751896689.jpg";
 import rabatImg4 from "../../assets/1591971335357-Yan26E6Q5Bs3L83b_1775751896726.jpeg";
@@ -58,7 +67,6 @@ import quarryImg6 from "../../assets/2-1-jpg_1775750522399.jpg";
 // ── Dakhla Road (El Soadaa) ──────────────────────
 import dakhlaImg1 from "../../assets/طريق-الواحات-البحرية-الفرافرة-0000jpg_1775750731955.jpg";
 import dakhlaImg2 from "../../assets/doneشرق-العوينات-1jpg_1775750731986-Tn.jpg";
-
 import dakhlaImg3 from "../../assets/doneشرق-العوينات-2jpg_1775750731983.jpg";
 import dakhlaImg4 from "../../assets/doneالعوينات-3jpg_1775750731987.jpg";
 
@@ -74,7 +82,6 @@ interface ProjectImage {
   src: string;
   phase: string;
 }
-
 
 interface Project {
   id: string;
@@ -109,6 +116,36 @@ const companies: Company[] = [
     period: "Sep 2025 – Present",
     projects: [
       {
+        id: "dib-shoring",
+        title: "DIB – Shoring Works",
+        location: "Dubai, UAE",
+        period: "Nov 2025 – May 2026",
+        role: "Surveyor",
+        description: "Shoring and surveying works for the DIB project in Dubai, covering Zones 3A, 3B and 4A. The scope included setting out and verification of H-Beams and shoring panels, level control, monitoring of beam deviations, establishment and checking of survey control points, and coordination of site constraints including existing underground services.",
+        responsibilities: [
+          "Setting out and verification of H-Beams and shoring panels across Zones 3A, 3B, and 4A",
+          "Level control and real-time monitoring of beam deviations",
+          "Establishment, maintenance, and rigorous checking of survey control points",
+          "Coordination of site constraints, particularly managing existing underground utility services",
+          "Preparation of accurate survey data, as-built measurements, and deviation logs",
+          "Compiling exhaustive technical documentation to support execution and quality control"
+        ],
+        challenges: "Managing tight execution tolerances for shoring panels while continuously mitigating risks from complex existing underground utility services across multiple active structural zones.",
+        solutions: "Implemented systematic underground service cross-checks prior to setting out, established localized high-frequency control loops, and utilized detailed deviation logs for real-time adjustments.",
+        images: [
+          { src: dib1, phase: "Overview" },
+          { src: dib2, phase: "Excavation" },
+          { src: dib3, phase: "Slopes" },
+          { src: dib4, phase: "Foundations" },
+          { src: dib5, phase: "Structural" },
+          { src: dib6, phase: "Completion" },
+          { src: dib7, phase: "Completion" },
+          { src: dib8, phase: "Completion" },
+          { src: dib9, phase: "Completion" },
+        ],
+        featured: true,
+      },
+      {
         id: "rabat-dubai",
         title: "Infrastructure & Foundation Projects",
         location: "Dubai, UAE",
@@ -133,7 +170,6 @@ const companies: Company[] = [
       },
     ],
   },
-
   // ── 2. HASSAN ALLAM (2021 – 2025) ────────────────────────────────────
   {
     id: "hassan",
